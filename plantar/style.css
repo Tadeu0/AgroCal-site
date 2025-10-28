@@ -1,0 +1,49 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.599), rgba(0, 0, 0, 0.817)), 
+    url(/imagem/—Pngtree—young\ green\ plants\ sprouting\ from_16381149.png);                  
+    background-size: cover;         
+    background-position: center;              
+    height: 100vh; 
+
+}
+
+.categoria{
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.697);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.titulo{
+    color: white;
+    font-size: 60px;
+    font-family:  'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+}
+
+.estrutura{
+    width: 90%;
+    height: 80vh;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+.text{
+    color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 20%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+}
