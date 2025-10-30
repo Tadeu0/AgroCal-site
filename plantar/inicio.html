@@ -12,17 +12,44 @@
         <div class="categoria">
             <h1 class="titulo">Preencha os campos </h1>
             <div class="estrutura">
-            <div  class="text">
+            <div  class="card1">
                 <p style="margin-bottom: 10px;">Tipo de planta:</p>
-                    <select name="plantas" id="plantas" style="height: 40px; font-size: 24px;">
-                        <option value="tomate">tomate</option>
-                        <option value="milho">milho</option>
-                        <option value="alface">alface</option>
-                        <option value="batata">batata</option>
+                    <select name="plantas" id="plantas" style="height: 40px; font-size: 24px;cursor: pointer;width: 50%;">
+                        <option style="background-color: rgb(0, 0, 0);" value="tomate">tomate</option>
+                        <option style="background-color: rgb(0, 0, 0);" value="milho">milho</option>
+                        <option style="background-color: black;" value="alface">alface</option>
+                        <option style="background-color: black;" value="batata">batata</option>
                         
                     </select>
+                </div>
+                <div class="card2">
+                 <p style="margin-bottom: 10px;">Tamanho da área (em m²):</p>
+                    <input  type="text " id="area" placeholder="Exemplo: 50, 100, 500, 1000.">
+                </div>
+                
+                 <div class="card3">
+                    <p style="margin-bottom: 10px;">Tipo de solo:</p>
+                    <select name="solo" id="solo" style="height: 40px; font-size: 24px;cursor: pointer;width: 50%;">
+                        <option style="background-color: black;" value="arenoso">Arenoso</option>
+                        <option style="background-color: black;" value="argiloso">Argiloso</option>
+                        <option style="background-color: black;" value="misto">Misto</option>
+                    </select>
+                 </div>
+
+                 <div class="card4">
+                    <p style="margin-bottom: 10px;">Quantidade média de chuva por semana (em mm):</p>
+                    <input type="text" id="chuva" placeholder="Exemplo: 10, 25, 40, 60.">
+                 </div>
+                 <div class="card5">
+                    <p style="margin-bottom: 10px;">Temperatura média (em °C):</p>
+                    <input type="text" id="temperatura" style="width: 60%;height: 40px;outline: none;" placeholder="Exemplo: 18, 22, 28, 32.">
+                 </div>
+                <button class="bot" onclick="varidar()">Acessar</button>
+
+                </div>
+      
             </div>
-            </div>
+            
         </div>
     <script src="script.js"></script>
 </body>

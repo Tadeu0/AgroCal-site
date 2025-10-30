@@ -1,6 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    /* border:  1px solid blue; */
 }
 
 .container{
@@ -24,6 +25,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    
 }
 .titulo{
     color: white;
@@ -34,16 +36,111 @@
 
 .estrutura{
     width: 90%;
-    height: 80vh;
-    border: 1px solid red;
+    height: 100vh;
+    /* border: 1px solid red; */
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y:scroll ;
 }
-.text{
+.card1{
     color: white;
     margin-top: 50px;
     margin-left: 50px;
-    width: 20%;
+    width: 30%;
     font-size: 40px;
     display: flex;
     flex-direction: column;
+    height: 20vh;
+}
+.card2{
+    color: white;
+    margin-top: 50px;
+    margin-left: 20%;
+    width: 35%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+.card3{
+    color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 35%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+.card4{
+    color: white;
+    margin-top: 50px;
+    margin-left: 15%;
+    width: 35%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+}
+.card5{
+    color: white;
+    margin-top: 50px;
+    margin-left: 45px;
+    width: 35%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+}
+
+#area{
+    width: 60%;
+    height: 40px;
+    outline: none;    /* serve para remover o border do input */
+    text-align: center;
+    border: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+}
+#chuva{
+    width: 60%;
+    height: 40px;
+    outline: none;    /* serve para remover o border do input */
+    text-align: center;
+    border: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+}
+#temperatura{
+    width: 60%;
+    height: 40px;
+    outline: none;    /* serve para remover o border do input */
+    text-align: center;
+    border: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+}
+#solo, #plantas{
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    
+}
+
+.bot{
+    width: 30%;
+    height: 7vh;
+    background-color: rgba(1, 65, 1, 0.797);
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 35%;
+    margin-top: 10%;
+    margin-bottom: 25px;
 }
