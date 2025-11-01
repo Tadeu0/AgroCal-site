@@ -1,7 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
-    /* border:  1px solid blue; */
+    /* border:  1px solid blue;  */
 }
 
 .container{
@@ -76,7 +76,7 @@
 .card4{
     color: white;
     margin-top: 50px;
-    margin-left: 15%;
+    margin-left: -10%;
     width: 35%;
     font-size: 40px;
     display: flex;
@@ -94,16 +94,7 @@
     height: 30vh;
 }
 
-#area{
-    width: 60%;
-    height: 40px;
-    outline: none;    /* serve para remover o border do input */
-    text-align: center;
-    border: 0;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.162);
-}
+
 #chuva{
     width: 60%;
     height: 40px;
@@ -141,6 +132,6 @@
     font-size: 25px;
     font-weight: bold;
     margin-left: 35%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 25px;
 }
