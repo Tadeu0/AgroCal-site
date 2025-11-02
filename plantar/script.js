@@ -48,16 +48,15 @@ else if (selectplantas === "tomate" && selectsolo === "argiloso") {
     const pont = document.getElementById("pontuação")
     const text = document.getElementById("text")
 
-    let final = temp_geral + chuva_geral
-    pont.innerText =  final 
+    pont.innerText = temp_geral + chuva_geral
 
-    if(Number(pont.innerText) >= 85 && Number(pont.innerText) <= 100){
+    if(Number(pont) >= 85 && Number(pont) <= 100){
         text.innerText  = "As condições estão ideais, ótimo momento para cultivar."
     }
-    else if(Number(pont.innerText) >= 60 && Number(pont.innerText) <= 84){
+    else if(Number(pont) >= 60 && Number(pont) <= 84){
         text.innerText  = "Condições razoáveis, com pequenos ajustes é possível plantar."
     }
-    else if(Number(pont.innerText) >= 35 && Number(pont.innerText) <= 59){
+    else if(Number(pont) >= 35 && Number(pont) <= 59){
         text.innerText  = "Condições medianas, talvez seja melhor adiar o plantio ou ajustar fatores."
     }
     else {
