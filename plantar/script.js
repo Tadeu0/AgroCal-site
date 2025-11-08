@@ -9,7 +9,7 @@ function varidar() {
 
 
  //#region  Tomate
-if (selectplantas === "seleconar" && selectsolo === "argiloso" ) {
+if (selectplantas === "seleconar" && selectsolo === "seleconar" ) {
     alert("Selecione um campo de plantil")
 }
 if (selectplantas === "tomate" && selectsolo === "seleconar" ) {
