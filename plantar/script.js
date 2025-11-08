@@ -3,16 +3,16 @@ function varidar() {
     const selectsolo = document.getElementById("solo").value 
     const chuva = document.getElementById("chuva").value
     const temperatura = document.getElementById("temperatura").value
-    const area = document.getElementById("area")
+    const area = document.getElementById("area").value
     
     
 
 
  //#region  Tomate
-if (selectplantas === "seleconar" && selectsolo === "seleconar" ) {
+if (selectplantas === "seleconar" ) {
     alert("Selecione um campo de plantil")
 }
-if (selectplantas === "tomate" && selectsolo === "seleconar" ) {
+if (selectsolo === "seleconar" ) {
     alert("Selecione um campo do tipo de solo")
 }
 if (selectplantas === "tomate" && selectsolo === "arenoso") {
@@ -98,12 +98,7 @@ else if (selectplantas === "tomate" && selectsolo === "argiloso") {
 //#endregion
 
 //#region Milho
-    if (selectplantas === "seleconar" && selectsolo === "arenoso") {
-    alert("Selecione um campo de plantil")
-}
-if (selectplantas === "milho" && selectsolo === "seleconar" ) {
-    alert("Selecione um campo do tipo de solo")
-}
+
 if (selectplantas === "milho" && selectsolo === "argiloso") {
     alert("escolha outro tipo de solo")
 }
@@ -186,12 +181,7 @@ else if (selectplantas === "tomate" && selectsolo === "arenoso") {
     //#endregion
 
 //#region Alface
-if (selectplantas === "seleconar" && selectsolo === "misto") {
-    alert("Selecione um campo de plantil")
-}
-if (selectplantas === "alface" && selectsolo === "seleconar" ) {
-    alert("Selecione um campo do tipo de solo")
-}
+
 if (selectplantas === "alface" && selectsolo === "arenoso") {
     alert("escolha outro tipo de solo")
 }
@@ -273,12 +263,7 @@ else if (selectplantas === "alface" && selectsolo === "misto") {
 //#endregion
 
 //#region Batata
-if (selectplantas === "seleconar" && selectsolo === "argiloso") {
-    alert("Selecione um campo de plantil")
-}
-if (selectplantas === "batata" && selectsolo === "seleconar" ) {
-    alert("Selecione um campo do tipo de solo")
-}
+
 if (selectplantas === "batata" && selectsolo === "arenoso") {
     alert("escolha outro tipo de solo")
 }
