@@ -19,12 +19,13 @@
 
 .categoria{
     width: 90%;
-    height: 90vh;
+    height: 95vh;
     background-color: rgba(0, 0, 0, 0.697);
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    padding: 10px;
     
 }
 .titulo{
@@ -34,20 +35,34 @@
     font-weight: bolder;
 }
 
-.estrutura{
+#plantil{
     width: 90%;
-    height: 100vh;
+    height: 120vh;
     /* border: 1px solid red; */
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     overflow-y:scroll ;
+    display: none;
+    
+    
+}
+.card0{
+    color: white;
+    margin-top: 40px;
+    margin-left: 5%;
+    width: 40%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    margin-bottom: 15px;
 }
 .card1{
     color: white;
     margin-top: 50px;
-    margin-left: 50px;
-    width: 30%;
+    margin-left: 120px;
+    width: 35%;
     font-size: 40px;
     display: flex;
     flex-direction: column;
@@ -55,9 +70,9 @@
 }
 .card2{
     color: white;
-    margin-top: 50px;
-    margin-left: 20%;
-    width: 35%;
+    margin-top: 70px;
+    margin-left: 50%;
+    width: 40%;
     font-size: 40px;
     display: flex;
     flex-direction: column;
@@ -65,9 +80,9 @@
 }
 .card3{
     color: white;
-    margin-top: 50px;
-    margin-left: 50px;
-    width: 35%;
+    margin-top: -12.5%;
+    margin-left: 50%;
+    width: 40%;
     font-size: 40px;
     display: flex;
     flex-direction: column;
@@ -75,8 +90,8 @@
 }
 .card4{
     color: white;
-    margin-top: 50px;
-    margin-left: -10%;
+    margin-top: 10%;
+    margin-left: 10%;
     width: 35%;
     font-size: 40px;
     display: flex;
@@ -85,15 +100,33 @@
 }
 .card5{
     color: white;
-    margin-top: 50px;
-    margin-left: 45px;
+    margin-top: -18.5%;
+    margin-left: 53%;
     width: 35%;
     font-size: 40px;
     display: flex;
     flex-direction: column;
     height: 30vh;
+    margin-bottom: 15px;
+}
+.card6{
+    color: white;
+    margin-left: 10%; 
+    width: 35%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    margin-bottom: 15px;
 }
 
+.estru_inputs{
+    border:  1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+}
 
 #chuva{
     width: 60%;
@@ -115,7 +148,17 @@
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.162);
 }
-#solo, #plantas{
+#area{
+    width: 60%;
+    height: 40px;
+    outline: none;    /* serve para remover o border do input */
+    text-align: center;
+    border: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+}
+#solo, #plantas, #deseja{
     background-color: rgb(0, 0, 0);
     color: aqua;
     

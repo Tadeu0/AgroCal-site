@@ -11,10 +11,19 @@
     <div class="container">
         <div class="categoria">
             <h1 class="titulo">Preencha os campos </h1>
-            <div class="estrutura">
+            <div class="card0">
+               <p style="margin-bottom: 10px;">O que deseja:</p>
+               <select name="deseja" id="deseja" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
+                   <option style="background-color: black;" value="selecionar">Selecionar</option>
+                   <option style="background-color: black;" value="compatibilidade">compatibilidade do plantil</option>
+                   <option style="background-color: black;" value="acidez">Ácidez</option>
+               </select>
+            </div>
+            <div id="plantil">
             <div  class="card1">
                 <p style="margin-bottom: 10px;">Tipo de planta:</p>
-                    <select name="plantas" id="plantas" style="height: 40px; font-size: 24px;cursor: pointer;width: 50%;">
+                    <select name="plantas" id="plantas" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
+                        <option style="background-color: black;" value="seleconar">Selecionar</option>
                         <option style="background-color: black;" value="tomate">tomate</option>
                         <option style="background-color: black;" value="milho">milho</option>
                         <option style="background-color: black;" value="alface">alface</option>
@@ -23,15 +32,17 @@
                     </select>
                 </div>
                 
-
-                 <div class="card3">
+                <div class="card3">
                     <p style="margin-bottom: 10px;">Tipo de solo:</p>
-                    <select name="solo" id="solo" style="height: 40px; font-size: 24px;cursor: pointer;width: 50%;">
+                    <select name="solo" id="solo" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
+                        <option style="background-color: black;" value="seleconar">Selecionar</option>
                         <option style="background-color: black;" value="arenoso">Arenoso</option>
                         <option style="background-color: black;" value="argiloso">Argiloso</option>
                         <option style="background-color: black;" value="misto">Misto</option>
                     </select>
-                 </div>
+                </div>
+                
+               
 
                  <div class="card4">
                     <p style="margin-bottom: 10px;">Quantidade média de chuva por semana (em mm):</p>
@@ -40,22 +51,32 @@
 
                  <div class="card5">
                     <p style="margin-bottom: 10px;">Temperatura média (em °C):</p>
-                    <input type="text" id="temperatura" style="width: 60%;height: 40px;outline: none;" placeholder="Exemplo: 18, 22, 28, 32.">
+                    <input type="text" id="temperatura" style="width: 60%;height: 40px;outline: none; margin-top: 60px;" placeholder="Exemplo: 18, 22, 28, 32.">
                  </div>
-
+                 <div class="card6">
+                    <p style="margin-bottom: 10px;">Tamanho da área (em m²):</p>
+                    <input type="text" id="area" style="width: 60%;height: 40px;outline: none; margin-top: 10px;" placeholder="Exemplo: 50, 100, 500, 1000.">
+                 </div>
+                 
                 <button class="bot" onclick="varidar()">Acessar</button>
-                    <h1 style="color: rgb(255, 255, 255);margin-top:
-                  15%;margin-left: -23%;margin-bottom: 50px;">Resultado final:</h1>
-                 <div style="width: 20%; height: 25vh; background-color: rgba(0, 0, 0, 0.105);margin-top:
-                  20%;margin-left: -20%;margin-bottom: 50px;display: flex;align-items: center;justify-content: center;">
-                 <h1 id="pontuação" style="font-size: 200px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></h1>
-                 <h1  style="font-size: 200px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">   /100</h1>
+                <h1 >Resultado final:</h1>
+                 <div >
+                 <h1 style="font-size: 50px;color: white;margin-left: 35%;">compatibilidade do plantil</h1>
+                 <h1 id="pontuação" style="font-size: 50px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-left: 45%;"></h1>
+                 <h1 id="pontuação_m" style="font-size: 50px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left: 45%;"></h1>
+                 <h1 id="pontuação_a" style="font-size: 50px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left: 45%;"></h1>
+                 <h1 id="pontuação_b" style="font-size: 50px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left: 45%;"></h1>
+                 
                  </div>
 
-                 <p id="text" style="color: white;margin-top:
-                  38%;margin-left: -35%;margin-bottom: 50px;font-size: 25px; "></p>
+                 
+
+                </div>
+                <div id="acidez" style="display: none;">
+                  <input type="text" placeholder="ola">
                 </div>
       
+
             </div>
             
         </div>
