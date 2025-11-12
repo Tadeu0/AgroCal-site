@@ -156,7 +156,7 @@
     outline: none;    /* serve para remover o border do input */
     text-align: center;
     border: 0;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.645);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.799);
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.162);
 }
@@ -214,4 +214,11 @@
     margin-left: 35%;
     margin-top: 5%;
     margin-bottom: 25px;
+}
+#pontuacao{
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 38%;
+    color: white;
+    font-size: 90px;
 }

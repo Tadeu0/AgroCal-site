@@ -5,40 +5,63 @@ function varidar() {
     const chuva = document.getElementById("chuva").value
     const temperatura = document.getElementById("temperatura").value
     const area = document.getElementById("area").value
+    const pont = document.getElementById("pontuacao")
+    const texto = document.getElementById("texto")
 
     var hortalicas =
         [
             {
                 'id': 0,
                 'nome': 'tomate',
-                'temp_min_ideal': 24,
-                'temp_max_ideal': 28,
-                'temp_min_aceitavel': 20,
-                'temp_max_aceitavel': 30,
-                'chuva_min_ideal': 0,
-                'chuva_max_ideal': 0,
-                'chuva_min_aceitavel': 0,
-                'chuva_max_aceitavel': 0,
-                'area_ideal': 0,
-                'area_aceitavel': 0,
-                'area_fora': 0,
+                'temp_min_ideal': 18,
+                'temp_max_ideal': 27,
+                'temp_baixa': 10,
+                'temp_alta': 30,
+                'chuva_min_ideal': 20,
+                'chuva_max_ideal': 40,
+                'chuva_baixa': 10,
+                'chuva_alta': 30,
                 'compatibilidade_solo': 'argiloso'
-            }, {
+            }, 
+                {
                 'id': 1,
+                'nome': 'milho',
+                'temp_min_ideal': 18,
+                'temp_max_ideal': 27,
+                'temp_baixa': 10,
+                'temp_alta': 30,
+                'chuva_min_ideal': 20,
+                'chuva_max_ideal': 40,
+                'chuva_baixa': 10,
+                'chuva_alta': 30,
+                'compatibilidade_solo': 'aneroso'
+            }, 
+                {
+                'id': 2,
                 'nome': 'alface',
-                'temp_min_ideal': 12,
-                'temp_max_ideal': 25,
-                'temp_min_aceitavel': 5,
-                'temp_max_aceitavel': 36,
-                'chuva_min_ideal': 0,
-                'chuva_max_ideal': 0,
-                'chuva_min_aceitavel': 0,
-                'chuva_max_aceitavel': 0,
-                'area_ideal': 0,
-                'area_aceitavel': 0,
-                'area_fora': 0,
+                'temp_min_ideal': 18,
+                'temp_max_ideal': 27,
+                'temp_baixa': 10,
+                'temp_alta': 30,
+                'chuva_min_ideal': 20,
+                'chuva_max_ideal': 40,
+                'chuva_baixa': 10,
+                'chuva_alta': 30,
                 'compatibilidade_solo': 'misto'
-            }
+            }, 
+                {
+                'id': 3,
+                'nome': 'batata',
+                'temp_min_ideal': 18,
+                'temp_max_ideal': 27,
+                'temp_baixa': 10,
+                'temp_alta': 30,
+                'chuva_min_ideal': 20,
+                'chuva_max_ideal': 40,
+                'chuva_baixa': 10,
+                'chuva_alta': 30,
+                'compatibilidade_solo': 'argiloso'
+            }, 
         ]
 
     for (let i = 0; i < hortalicas.length; i++) {
@@ -49,14 +72,14 @@ function varidar() {
     }
 
     //#region  Calculo
+    if (selectplantas === "selecionar") {
+        alert("Selecione um campo de plantil")
+    }
+    if (selectsolo === "selecionar") {
+        alert("Selecione um campo do tipo de solo")
+    }
     function calcular(i) {
 
-        if (selectplantas === "selecionar") {
-            alert("Selecione um campo de plantil")
-        }
-        if (selectsolo === "selecionar") {
-            alert("Selecione um campo do tipo de solo")
-        }
         if (selectplantas === hortalicas[i].nome 
             && selectsolo !== hortalicas[i].compatibilidade_solo) {
             alert("escolha outro tipo de solo")
@@ -64,79 +87,61 @@ function varidar() {
 
         else if (selectplantas === hortalicas[i].nome 
             && selectsolo === hortalicas[i].compatibilidade_solo) {
-            let temp_ideal = 0
-            let temp_aceitavel = 0
-            let temp_fora = 0
-            let chuva_ideal = 0
-            let chuva_aceitavel = 0
-            let chuva_fora = 0
-            let area_ideal = 0
-            let area_aceitavel = 0
-            let area_fora = 0
+
+                let pontuacao_temp_boa = 0
+                let pontuacao_temp_medio = 0
+                let pontuacao_temp_ruim = 0
+
 
             // Temperatura
             if (Number(temperatura) >= hortalicas[i].temp_min_ideal &&
                 Number(temperatura) <= hortalicas[i].temp_max_ideal) {
 
-                temp_ideal = 40 // pontuação
+                pontuacao_temp_boa = 40
             }
-            else if (Number(temperatura) >= hortalicas[i].temp_min_aceitavel
-                && Number(temperatura) <= hortalicas[i].temp_max_aceitavel) {
-                temp_aceitavel = 25
-            }
-            else {
-                temp_fora = 10
-            }
-
-            // área 
-            if (Number(area) >= 50) {
-                area_ideal = 10
-            }
-            else if (Number(area) >= 30 && Number(area) <= 49) {
-                area_aceitavel = 5
+            else if (Number(temperatura) >= hortalicas[i].temp_alta) {
+                pontuacao_temp_medio = 20
             }
             else {
-                area_fora = 2
+                pontuacao_temp_ruim = 5
             }
 
-
+                let pontuacao_chuva_boa = 0
+                let pontuacao_chuva_medio = 0
+                let pontuacao_chuva_ruim = 0
 
             // Chuva
             if (Number(chuva) >= hortalicas[i].chuva_min_ideal
                 && Number(chuva) <= hortalicas[i].chuva_max_ideal) {
-                chuva_ideal = 30
+                pontuacao_chuva_boa = 30
             }
-            else if (Number(chuva) >= hortalicas[i].chuva_min_aceitavel
-                && Number(chuva) <= hortalicas[i].chuva_max_aceitavel) {
-                chuva_aceitavel = 15
+            else if (Number(chuva) >= hortalicas[i].chuva_alta) {
+                pontuacao_chuva_medio = 15
             }
             else {
-                chuva_fora = 10
+                pontuacao_chuva_ruim = 5
             }
 
             // Soma geral
-            let temp_geral = temp_ideal + temp_aceitavel + temp_fora
-            let chuva_geral = chuva_ideal + chuva_aceitavel + chuva_fora
-            let area_geral = area_ideal + area_aceitavel + area_fora
 
+            pont_temp_geral = pontuacao_temp_boa + pontuacao_temp_medio + pontuacao_temp_ruim
+            pont_chuva_geral = pontuacao_chuva_boa + pontuacao_chuva_medio + pontuacao_chuva_ruim
+            const pont_total = pont_temp_geral + pont_chuva_geral
 
-            const pont = document.getElementById("pontuação")
-            const text = document.getElementById("text")
+            
+            pont.innerHTML = pont_total + " /100"
 
-            const pont_total = temp_geral + chuva_geral + area_geral
-            pont.innerHTML = pont_total
-
-            if (pont_total >= 85 && pont_total <= 100) {
-                text.innerText = "As condições estão ideais, ótimo momento para cultivar."
+            if (Number(pont_total) >= 85 && Number(pont_total) <= 100) {
+                texto.innerHTML = "As condições estão ideais, ótimo momento para cultivar."
             }
-            else if (pont_total >= 60 && pont_total <= 84) {
-                text.innerText = "Condições razoáveis, com pequenos ajustes é possível plantar."
+            else if (Number(pont_total) >= 60 && Number(pont_total) <= 84) {
+                texto.innerHTML = "Condições razoáveis, com pequenos ajustes é possível plantar."
             }
-            else if (pont_total >= 35 && pont_total <= 59) {
-                text.innerText = "Condições medianas, talvez seja melhor adiar o plantio ou ajustar fatores."
+            else if (Number(pont_total) >= 35 && Number(pont_total) <= 59) {
+                texto.innerHTML = "Condições medianas, talvez seja melhor adiar o plantio ou ajustar fatores."
             }
             else {
-                text.innerText = "As condições não são adequadas para essa planta."
+                texto.innerHTML = "As condições não são adequadas para essa planta."
             }
 
 
@@ -180,6 +185,13 @@ deseja.addEventListener("change", function () {
 
 //#endregion    
 
+
+
+
+
+
+
+
 //#region Ácidez
 
 function ph(){
@@ -220,8 +232,8 @@ function ph(){
                 'id': 0,
                 'nome': 'alface',
                 'ph_min_aceidavel': 6,
-                'ph_max_aceidavel': 7,    
-                'ph_alto': 7.5,
+                'ph_max_aceidavel': 6.8,    
+                'ph_alto': 8,
                 'ph_baixo': 5.5,
                 'ph_pontuacao_boa': 40,    
                  'ph_pontuacao_media': 20,    
@@ -232,10 +244,10 @@ function ph(){
         {
                 'id': 0,
                 'nome': 'batata',
-                'ph_min_aceidavel': 6,
-                'ph_max_aceidavel': 7,    
-                'ph_alto': 7.5,
-                'ph_baixo': 5.5,
+                'ph_min_aceidavel': 5,
+                'ph_max_aceidavel': 6,    
+                'ph_alto': 6.2,
+                'ph_baixo': 4.8,
                 'ph_pontuacao_boa': 40,    
                  'ph_pontuacao_media': 20,    
                  'ph_pontuacao_inadequada': 5,    
@@ -253,14 +265,14 @@ function ph(){
     }
 
 
+    if (selectplanta_ph === "selecionar") {
+        alert("Selecione um campo de plantil")
+    }
+    if (selectsolo_ph === "selecionar") {
+        alert("Selecione um campo do tipo de solo")
+    }
     function v(p){
         
-        if (selectplanta_ph === "selecionar") {
-            alert("Selecione um campo de plantil")
-        }
-        if (selectsolo_ph === "selecionar") {
-            alert("Selecione um campo do tipo de solo")
-        }
         if( selectplanta_ph === list_ph[p].nome 
             && selectsolo_ph !== list_ph[p].solo){
             alert("Escole outro tipo de solo")
@@ -282,6 +294,7 @@ function ph(){
                 else if( Number(ph) <= list_ph[p].ph_baixo){
                     list_ph[p].ph_pontuacao_inadequada
                 }
+                alert()
         }
 
     }
