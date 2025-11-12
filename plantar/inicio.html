@@ -23,7 +23,7 @@
             <div  class="card1">
                 <p style="margin-bottom: 10px;">Tipo de planta:</p>
                     <select name="plantas" id="plantas" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
-                        <option style="background-color: black;" value="seleconar">Selecionar</option>
+                        <option style="background-color: black;" value="selecionar">Selecionar</option>
                         <option style="background-color: black;" value="tomate">tomate</option>
                         <option style="background-color: black;" value="milho">milho</option>
                         <option style="background-color: black;" value="alface">alface</option>
@@ -35,7 +35,7 @@
                 <div class="card3">
                     <p style="margin-bottom: 10px;">Tipo de solo:</p>
                     <select name="solo" id="solo" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
-                        <option style="background-color: black;" value="seleconar">Selecionar</option>
+                        <option style="background-color: black;" value="selecionar">Selecionar</option>
                         <option style="background-color: black;" value="arenoso">Arenoso</option>
                         <option style="background-color: black;" value="argiloso">Argiloso</option>
                         <option style="background-color: black;" value="misto">Misto</option>
@@ -63,9 +63,7 @@
                  <h1 style="font-size: 50px;color: white;margin-left: 25%;">compatibilidade do plantil</h1>
                  <div class="pont">
                  <h1 id="pontuação" style="font-size: 50px;color: white;margin-left: 50%;"></h1>
-                 <h1 id="pontuação_m" style="font-size: 50px;color: white;margin-left: 50%;"></h1>
-                 <h1 id="pontuação_a" style="font-size: 50px;color: white;margin-left: 50%;"></h1>
-                 <h1 id="pontuação_b" style="font-size: 50px;color: white;margin-left: 50%;"></h1>
+                
                  </div>
                  
 
@@ -81,8 +79,8 @@
 
                    <div  class="card1">
                 <p style="margin-bottom: 10px;">Tipo de planta:</p>
-                    <select name="plantas" id="plantas" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
-                        <option style="background-color: black;" value="seleconar">Selecionar</option>
+                    <select name="plantas" id="plantas_ph" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
+                        <option style="background-color: black;" value="selecionar">Selecionar</option>
                         <option style="background-color: black;" value="tomate">tomate</option>
                         <option style="background-color: black;" value="milho">milho</option>
                         <option style="background-color: black;" value="alface">alface</option>
@@ -94,8 +92,8 @@
 
                 <div class="card-a">
                     <p style="margin-bottom: 10px;">Tipo de solo:</p>
-                    <select name="solo" id="solo" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
-                        <option style="background-color: black;" value="seleconar">Selecionar</option>
+                    <select name="solo" id="solo_ph" style="height: 50px; font-size: 24px;cursor: pointer;width: 80%;">
+                        <option style="background-color: black;" value="selecionar">Selecionar</option>
                         <option style="background-color: black;" value="arenoso">Arenoso</option>
                         <option style="background-color: black;" value="argiloso">Argiloso</option>
                         <option style="background-color: black;" value="misto">Misto</option>
@@ -105,9 +103,9 @@
                     <p style="margin-bottom: 10px;">Digite O ph do solo:</p>
                     <input type="text" id="ph" style="width: 60%;height: 40px;outline: none; margin-top: 10px;" placeholder="">
                  </div>
+                 <button class="bot" onclick="ph()">Acessar</button>
                 </div>
       
-
             </div>
             
         </div>
