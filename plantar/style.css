@@ -215,10 +215,17 @@
     margin-top: 5%;
     margin-bottom: 25px;
 }
-#pontuacao{
+#pontuacao, #pontuacao_ph{
     width: 30%;
     margin-top: 20px;
     margin-left: 38%;
     color: white;
     font-size: 90px;
+}
+#texto, #texto_ph{
+    width: 60%;
+    margin-top: 30px;
+    margin-left: 20%;
+    color: white;
+    font-size: 34px;
 }

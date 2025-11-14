@@ -64,9 +64,11 @@ function varidar() {
             }, 
         ]
 
-    for (let i = 0; i < hortalicas.length; i++) {
+    
+    
+    
+        for (let i = 0; i < hortalicas.length; i++) {
         if (hortalicas[i].nome === selectplantas) {
-            console.log(hortalicas[i].nome)
             calcular(i)
         }
     }
@@ -97,7 +99,7 @@ function varidar() {
             if (Number(temperatura) >= hortalicas[i].temp_min_ideal &&
                 Number(temperatura) <= hortalicas[i].temp_max_ideal) {
 
-                pontuacao_temp_boa = 40
+                pontuacao_temp_boa = 50
             }
             else if (Number(temperatura) >= hortalicas[i].temp_alta) {
                 pontuacao_temp_medio = 20
@@ -113,7 +115,7 @@ function varidar() {
             // Chuva
             if (Number(chuva) >= hortalicas[i].chuva_min_ideal
                 && Number(chuva) <= hortalicas[i].chuva_max_ideal) {
-                pontuacao_chuva_boa = 30
+                pontuacao_chuva_boa = 50
             }
             else if (Number(chuva) >= hortalicas[i].chuva_alta) {
                 pontuacao_chuva_medio = 15
@@ -133,6 +135,7 @@ function varidar() {
 
             if (Number(pont_total) >= 85 && Number(pont_total) <= 100) {
                 texto.innerHTML = "As condições estão ideais, ótimo momento para cultivar."
+                texto.style.color = ''
             }
             else if (Number(pont_total) >= 60 && Number(pont_total) <= 84) {
                 texto.innerHTML = "Condições razoáveis, com pequenos ajustes é possível plantar."
@@ -209,7 +212,7 @@ function ph(){
                 'ph_max_aceidavel': 6.8,    
                 'ph_alto': 7.5,
                 'ph_baixo': 5.5,
-                'ph_pontuacao_boa': 40,    
+                'ph_pontuacao_boa': 50,    
                 'ph_pontuacao_media': 20,    
                 'ph_pontuacao_inadequada': 5,    
                 'solo': 'argiloso'
@@ -222,7 +225,7 @@ function ph(){
                 'ph_max_aceidavel': 7,    
                 'ph_alto': 7.5,
                 'ph_baixo': 5.5,
-                'ph_pontuacao_boa': 40,    
+                'ph_pontuacao_boa': 50,    
                  'ph_pontuacao_media': 20,    
                  'ph_pontuacao_inadequada': 5,    
                 'solo': 'arenoso'
@@ -235,7 +238,7 @@ function ph(){
                 'ph_max_aceidavel': 6.8,    
                 'ph_alto': 8,
                 'ph_baixo': 5.5,
-                'ph_pontuacao_boa': 40,    
+                'ph_pontuacao_boa': 50,    
                  'ph_pontuacao_media': 20,    
                  'ph_pontuacao_inadequada': 5,    
                 'solo': 'misto'
@@ -248,7 +251,7 @@ function ph(){
                 'ph_max_aceidavel': 6,    
                 'ph_alto': 6.2,
                 'ph_baixo': 4.8,
-                'ph_pontuacao_boa': 40,    
+                'ph_pontuacao_boa': 50,    
                  'ph_pontuacao_media': 20,    
                  'ph_pontuacao_inadequada': 5,    
                 'solo': 'arenoso'
@@ -271,6 +274,8 @@ function ph(){
     if (selectsolo_ph === "selecionar") {
         alert("Selecione um campo do tipo de solo")
     }
+
+
     function v(p){
         
         if( selectplanta_ph === list_ph[p].nome 
